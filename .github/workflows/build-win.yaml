@@ -32,8 +32,6 @@ jobs:
           python-version: '3.11'
       - name: Check out the repo
         uses: actions/checkout@v4
-        with:
-          repository: lexiforest/curl-impersonate
       - name: Install NASM
         shell: cmd
         run: choco install nasm -y
