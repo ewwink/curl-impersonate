@@ -15,6 +15,7 @@ set packages=%cd%\packages
 
 :: configuration
 set configuration=Release
+set CL=/W0 /wd4996 /wd4244 /wd4267 /wd4018 /wd4101 /wd4305 /wd4312 /wd4706 /wd4800 /wd4996
 
 set cmake_common_args=-GNinja -DCMAKE_BUILD_TYPE=%configuration%^
   -DCMAKE_PREFIX_PATH="%packages%" -DCMAKE_INSTALL_PREFIX="%packages%"^
