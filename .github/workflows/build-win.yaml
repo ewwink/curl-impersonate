@@ -45,9 +45,6 @@ jobs:
           if [[ -f "$DEF_FILE" ]]; then
             echo "        SSL_get_version" >> "$DEF_FILE"
             echo "        SSL_version" >> "$DEF_FILE"
-            echo "        SSL_get_cipher" >> "$DEF_FILE"
-            echo "        SSL_get_cipher_name" >> "$DEF_FILE"
-            echo "        SSL_get_cipher_version" >> "$DEF_FILE"
             echo "Added exports to $DEF_FILE:"
             tail -n 10 "$DEF_FILE"
           else
