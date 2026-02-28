@@ -11,6 +11,7 @@ env:
   NGHTTP2_COMMIT: 8f44147c385fb1ed93a6f39911eeb30279bfd2dd
   NGHTTP3_TAG: v1.15.0
   NGTCP2_TAG: v1.20.0
+  C_ARES_TAG: v1.34.6
 jobs:
   build-windows:
     name: Build windows binaries
@@ -46,6 +47,8 @@ jobs:
             echo "        SSL_get_version" >> "$DEF_FILE"
             echo "        SSL_version" >> "$DEF_FILE"
             echo "        ZSTD_decompress" >> "$DEF_FILE"
+            echo "        ZSTD_isError" >> "$DEF_FILE"
+            echo "        ZSTD_getErrorName" >> "$DEF_FILE"
             echo "Added exports to $DEF_FILE:"
             tail -n 10 "$DEF_FILE"
           else
